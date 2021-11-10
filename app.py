@@ -6,13 +6,13 @@ from dash.dependencies import Input, Output
 import plotly.express as px
 import plotly.graph_objects as go
 
-import api_handler
+import api_bme
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
-ah = api_handler.APIBMEHandler(market='IBEX')
+ah = api_bme.APIBMEHandler(market='IBEX')
 
 app.layout = html.Div(children=[
     html.H1(
