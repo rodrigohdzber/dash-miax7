@@ -6,10 +6,10 @@ Created on Wed Nov 10 17:56:43 2021
 """
 
 from api_bme import APIBMEHandler
-
+markets = ["DAX", "IBEX", "EUROSTOXX"]
 ah = APIBMEHandler(market = "IBEX")
 
-santander = ah.get_close_data_ticker("SAN")
+data = ah.get_close_data_ticker("SAN")
 
 ticker_master = ah.get_ticker_master()
-santander.plot()
+data.plot()
