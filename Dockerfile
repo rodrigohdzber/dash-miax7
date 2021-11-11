@@ -11,4 +11,4 @@ COPY src/ .
 # Expose the API Port
 EXPOSE 8080
 # Run the server
-CMD ["python", "app,py"]
+CMD ["python", "app.py"]
