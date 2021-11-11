@@ -187,14 +187,9 @@ class APIBMEHandler:
         response = requests.get(url, params)
         
         tk_data = response.json()
-        
-        if response.status_code == 200:
+        df_data = pd.read_json(tk_data, typ = "frame")
             
-            df_data = pd.read_json(tk_data, typ='frame')
             
-        else: 
-            
-            print(response.text)
             
         return df_data
         

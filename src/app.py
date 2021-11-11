@@ -85,7 +85,7 @@ def change_graph(ticker):
     
 
 if __name__ == "__main__":  #ejecuta la aplicacion.
-    app.run_server(debug = True)  #QUE CORRA LA APLICACION DE ARRIBA.
+    app.run_server(host="0.0.0.0", debud=False, port=8080)  #QUE CORRA LA APLICACION DE ARRIBA.
     
 
 
